@@ -2,59 +2,83 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday</title>
+<title>Birthday Message</title>
+
 <style>
     body {
         margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #ffd6e0, #cde7ff);
-        font-family: Arial, sans-serif;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(-45deg, #ffdde1, #ee9ca7, #c9d6ff, #e2e2e2);
+        background-size: 400% 400%;
+        animation: gradientMove 10s ease infinite;
+    }
+
+    @keyframes gradientMove {
+        0% {background-position:0% 50%;}
+        50% {background-position:100% 50%;}
+        100% {background-position:0% 50%;}
+    }
+
+    .card {
+        background: rgba(255,255,255,0.85);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         text-align: center;
-    }
-
-    .container {
         max-width: 600px;
-    }
-
-    .btn {
-        padding: 15px 30px;
-        font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        background: #ff7aa2;
-        color: white;
-        cursor: pointer;
+        backdrop-filter: blur(8px);
         transition: 0.3s;
     }
 
-    .btn:hover {
-        background: #ff4d7a;
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 12px;
+        background: #ff5e8a;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 5px 15px rgba(255,94,138,0.4);
+    }
+
+    button:hover {
+        background: #ff2f6d;
+        transform: scale(1.05);
     }
 
     .message {
-        margin-top: 30px;
-        font-size: 18px;
+        margin-top: 20px;
+        font-size: 17px;
         line-height: 1.8;
         color: #333;
         display: none;
         white-space: pre-line;
-        animation: fadeIn 2s ease;
+        animation: fadeIn 2s ease forwards;
     }
 
     @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        from {opacity: 0; transform: translateY(10px);}
+        to {opacity: 1; transform: translateY(0);}
     }
 </style>
+
 </head>
+
 <body>
 
-<div class="container">
-    <button class="btn" onclick="showMessage()">Bấm vào đây nè 🎁</button>
+<div class="card">
+    <h2>🎂 Một lời nhắn nhỏ</h2>
+
+    <button onclick="showMessage()">Bấm vào đây nhé</button>
 
     <div class="message" id="msg">
 Sếp ơi, chúc sếp tuổi mới  
