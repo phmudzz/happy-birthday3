@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ffd6e0, #cde7ff);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        background: #ff7aa2;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #ff4d7a;
+    }
+
+    .message {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+        display: none;
+        white-space: pre-line;
+        animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn" onclick="showMessage()">Bấm vào đây nè 🎁</button>
+
+    <div class="message" id="msg">
+Sếp ơi, chúc sếp tuổi mới  
+
+Phúc không muốn chúc Dương phải mạnh mẽ hơn nữa, vì Dương đã mạnh mẽ đủ rồi.  
+Chỉ mong rằng Dương sẽ nhẹ nhàng với chính bản thân mình hơn, vui nhiều hơn và sẽ gặp được người hiểu bạn như cách bạn luôn hiểu cho người khác nhé.  
+
+Có những lúc chẳng cần nói gì,  
+chỉ cần quay lại — vẫn thấy bọn tôi đứng đó,  
+là đủ để biết mình chưa từng một mình nhé Dương.
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("msg").style.display = "block";
+}
+</script>
+
+</body>
+</html>
